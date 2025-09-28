@@ -4,7 +4,7 @@ import RibbonClass from  './src/js/classes/RibbonClass.js';
 import XrmUtilityClass from  './src/js/classes/XrmUtilityClass.js';
 import XrmWebApiClass from  './src/js/classes/XrmWebApiClass.js';
 import { addWorkDays, isFutureDate, isPastDate, isCurrentDate } from  './src/js/DateTools.js';
-import { isValidAccountNumber, isValidCreditCardNumber, isValidCardAccountNumber, maskCreditCardNumber, formatAccountNumber } from  './src/js/TextTools.js';
+import { isValidNZBankAccountNumber, isValidCreditCardNumber, isValidCardAccountNumber, maskCreditCardNumber, formatAccountNumber } from  './src/js/TextTools.js';
 import { currentAppName, isUserInTeam } from './src/js/Utilities.js';
 
 /**
@@ -16,4 +16,4 @@ String.prototype.StripBraces = function ()
     return this.replace(/[{}]/g, "").toLowerCase();
 }
 
-export { DashboardClass, FormClass, RibbonClass, XrmUtilityClass, XrmWebApiClass, addWorkDays, isFutureDate, isPastDate, isCurrentDate, isValidAccountNumber, isValidCreditCardNumber, isValidCardAccountNumber, maskCreditCardNumber, formatAccountNumber, currentAppName, isUserInTeam };
+export { DashboardClass, FormClass, RibbonClass, XrmUtilityClass, XrmWebApiClass, addWorkDays, isFutureDate, isPastDate, isCurrentDate, isValidNZBankAccountNumber, isValidCreditCardNumber, isValidCardAccountNumber, maskCreditCardNumber, formatAccountNumber, currentAppName, isUserInTeam };

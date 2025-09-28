@@ -1,6 +1,6 @@
 /**   
  * Confirm a provided string, or array of strings, is a valid NZ bank account number.
- * @method isValidAccountNumber
+ * @method isValidNZBankAccountNumber
  * @param {string} accountText A string specifying the account number to be validated
  * @param {boolean} westpacOnly Only accepts Westpac account numbers, defaults to false
  * @return {boolean}
@@ -9,7 +9,7 @@
  * a string of 2,4,7 then 3 digits separated by a hyphen
  * an array consisting of strings of 2, 4, 7 then 3 digits
  */   
-function isValidAccountNumber(accountText, westpacOnly=false) {
+function isValidNZBankAccountNumber(accountText, westpacOnly=false) {
     const algorithms = new Map()
     algorithms.set('A', { mulitiplier : [0, 0, 6, 3, 7, 9, 0, 10, 5, 8, 4, 2, 1, 0, 0, 0], modulo : 11})
     algorithms.set('B', { mulitiplier : [0, 0, 0, 0, 0, 0, 0, 10, 5, 8, 4, 2, 1, 0, 0, 0], modulo : 11})
@@ -150,4 +150,4 @@ function formatAccountNumber(accountNumber) {
     return `${bank}-${branch}-${account}-${suffix}`;        
 }
 
-export { isValidAccountNumber , isValidCreditCardNumber, isValidCardAccountNumber, maskCreditCardNumber, formatAccountNumber}
+export { isValidNZBankAccountNumber as isValidNZBankAccountNumber , isValidCreditCardNumber, isValidCardAccountNumber, maskCreditCardNumber, formatAccountNumber}

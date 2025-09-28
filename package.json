@@ -16,11 +16,17 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "node install.js"
+    "postinstall": "node install.js",
+    "lint": "eslint . --ext .js",
+    "lint:fix": "eslint . --ext .js --fix"
   },
   "author": "Paul Hewson",
   "license": "ISC",
   "devDependencies": {
+    "@eslint/js": "^9.36.0",
+    "eslint": "^9.36.0",
+    "globals": "^16.4.0",
+    "prettier": "3.6.2",
     "webpack": "^5.90.3",
     "webpack-cli": "^5.1.4"
   }
