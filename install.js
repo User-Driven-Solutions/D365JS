@@ -6,13 +6,12 @@ const packageJsonPath = '../../package.json'; // Adjust the path if needed
 // Define the script to be added
 const d365jsScript = '"d365js"';
 
-
 // Add a src folder
-fs.mkdir('../../src',(err)=>{
+fs.mkdir('../../src', (err) => {
   if (err) {
     return console.error(err);
-}
-console.log('Directory created successfully!');
+  }
+  console.log('Directory created successfully!');
 });
 
 // Read the package.json file
@@ -36,7 +35,7 @@ fs.readFile(packageJsonPath, 'utf8', (err, data) => {
     if (err) {
       console.error('Error writing package.json:', err);
     } else {
-      console.log('Added \'d365js\' script to package.json');
+      console.log("Added 'd365js' script to package.json");
     }
   });
 });

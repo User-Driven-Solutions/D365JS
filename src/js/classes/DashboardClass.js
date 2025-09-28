@@ -1,14 +1,11 @@
-export default class DashboardClass
-{
-    context;
+export default class DashboardClass {
+  context;
 
-    constructor(context)
-    {
-        this.context = context;
-    }
+  constructor(context) {
+    this.context = context;
+  }
 
-    get name()
-    {
-        return this.context.name;
-    }
+  get name() {
+    return this.context.name;
+  }
 }
