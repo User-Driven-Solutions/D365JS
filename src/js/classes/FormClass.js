@@ -19,6 +19,17 @@ export default class FormClass extends ContextClass {
     this.addTabStateChange();
   }
 
+  get guid() {
+    const id = this.context.data.entity.getId();
+
+    if (!id) {
+        // New / unsaved record
+        return null;
+    }
+
+    return id.replace(/[{}]/g, "");
+  }
+
   addTabStateChange() {
     if (this.pageType === 'quickcreate') {
       // Cannot addTabStateChange for a quick create form - gets a error - Exception in customer logic: Cannot read properties of undefined (reading 'bind')

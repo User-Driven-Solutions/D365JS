@@ -7,6 +7,7 @@ class AccountForm extends Account {
         super(context);
         this.setValue('name', 'Temporary name set by JS');
         this.addOnChange('websiteurl', ()=>accountForm.setValue('tickersymbol', 'D365'));
+        invokeGetAccountClaims(this.guid);
     }
 
     OnSave()
